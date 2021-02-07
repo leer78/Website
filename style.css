@@ -74,3 +74,18 @@ body {
     width: 80%; 
     left: 10%; 
   }
+
+
+  .gallery{
+    margin:auto;
+  }
+
+  .gallery img{    
+      transition: 1s;
+      padding: 10px;
+  }
+
+  .gallery img:hover{
+      filter: grayscale(50%);
+      transform: scale(1.1);
+  }
