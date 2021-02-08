@@ -7,7 +7,7 @@ body {
 }
 
 .parallax{
-    background-color: rgb(255, 255, 255); 
+    background-color: rgb(153, 153, 153); 
 }
 
 .title{
@@ -28,6 +28,7 @@ body {
 }
 .menu{
     background-color: rgb(230, 230, 230);
+    text-align: center;
 }
 .menu-u1{
     margin: 0;
@@ -75,17 +76,16 @@ body {
     left: 10%; 
   }
 
-
   .gallery{
     margin:auto;
   }
 
   .gallery img{    
-      transition: 1s;
-      padding: 10px;
+      transition: .25s;
+      padding: 20px;
   }
 
   .gallery img:hover{
-      filter: grayscale(50%);
+      filter: grayscale(75%);
       transform: scale(1.1);
   }
