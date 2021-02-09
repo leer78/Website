@@ -1,71 +1,69 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800');
-
-.gallery {
-    text-align: center;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5%;
 }
 
-.gallery ul {
-    list-style: none;
-    margin: 5% 5%;
+.column {
+    flex: 20%;
+    padding: 0 1%;
 }
 
-.gallery li {
-    display: inline-block;
-    margin: 0px 0px;
-    padding-top: 5%;
-}  
-    
-  .gallery img{     
-      width: 90%;
-      transition: .25s ease;   
+   
 
-  }
-
-  .gallery img:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(10px 10px 5px gray);
-  }
-
-.image{
+.image {
     position: relative;
-    background-size: cover;
-    border-radius: 4px;
-    margin: 4px;
-    width: 25%;
-    height: 50%;
-    
+    width: 100%;
+    padding-top:5%;
+    vertical-align: middle;
 }
 
-  .image > input{
-      display:none;
-  }
+.image__img {
+    width: 100%; 
+    position: relative;
+}
 
-  .image > div,.image > h1{
-      position: absolute;
-      background-color: rgba(36,36,36,0.8);
-      bottom: 4px;
-      right: 4px;
-      left: 4px;
-      border-radius: 4px;
-      padding: 8px;
-      overflow: hidden;
-      opacity: 0;
-      transition: .5s;
-  }
+.image__overlay {
+    position: absolute;
+    top: 6%;
+    left: 0;
+    width: 100%;
+    height: 93%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
 
-  .image:hover > h1, .image > input:checked + h1 + div{
-      opacity: 0.8;
-  }
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
 
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
 
- 
+.image__overlay:hover {
+    opacity: 1;
+}
 
+.image__overlay:hover>* {
+    transform: translateY(0)
+}
 
-  
+.image__title {
+    font-size: 2cm;
+    font-weight: bold;
+}
 
-
-
-  
-  
-
-  
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
