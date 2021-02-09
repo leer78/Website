@@ -20,7 +20,7 @@ body {
 
 
 }
-#sticky{
+.sticky{
     position:fixed;
     top:0;
     width: 100%;
@@ -29,6 +29,7 @@ body {
 .menu{
     background-color: rgb(230, 230, 230);
     text-align: center;
+
 }
 .menu-u1{
     margin: 0;
@@ -48,7 +49,7 @@ body {
 
 .menu-u1 li:hover{
     transform: 2s;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .a-menu {
@@ -89,3 +90,7 @@ body {
       filter: grayscale(75%);
       transform: scale(1.1);
   }
+.ooga{
+    position: absolute;
+    top:1000px;
+}
