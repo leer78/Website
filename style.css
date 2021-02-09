@@ -76,21 +76,3 @@ body {
     width: 80%; 
     left: 10%; 
   }
-
-  .gallery{
-    margin:auto;
-  }
-
-  .gallery img{    
-      transition: .25s;
-      padding: 20px;
-  }
-
-  .gallery img:hover{
-      filter: grayscale(75%);
-      transform: scale(1.1);
-  }
-.ooga{
-    position: absolute;
-    top:1000px;
-}
