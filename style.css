@@ -26,9 +26,12 @@ body {
     width: 100%;
 
 }
+
+
 .menu{
     background-color: rgb(230, 230, 230);
     text-align: center;
+    position: relative;
 
 }
 .menu-u1{
@@ -60,13 +63,22 @@ body {
     display: inline-block;
     position: relative;
   }
+
+#current-page{
+    background-color:rgb(222, 222, 222);
+    
+
+}
+
+
+
 .a-menu:after {    
     bottom: 0;
     content: "";
     display: block;
     height: 2px;
     left: 50%;
-    position: relative;
+    position: absolute;
     background: rgb(0, 0, 0);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0px;
@@ -76,3 +88,5 @@ body {
     width: 80%; 
     left: 10%; 
   }
+
+
