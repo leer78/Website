@@ -38,29 +38,33 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
+    
+    
 }
 
 .image__overlay--blur {
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
 }
 
 .image__overlay>* {
-    transform: translateY(20px);
-    transition: transform 0.25s;
+    transform: translateY(100px);
+    transition: transform 0.75s ease;
 }
 
 .image__overlay:hover {
     opacity: 1;
+    filter: grayscale(75%);
 }
 
 .image__overlay:hover>* {
-    transform: translateY(0)
+    transform: translateY(0px)
 }
 
 .image__title {
-    font-size: 2cm;
-    font-weight: bold;
+    text-align: center;
+    font-size: 1cm;
+    font-weight: 100;
 }
 
 .image__description {
