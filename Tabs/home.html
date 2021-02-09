@@ -7,10 +7,45 @@
     <link rel="stylesheet" href="..\homeStyle.css">
     <title></title>
     <script src = "https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-    <script src = ""></script>
-    
+    <script> 
+    function stickyMenu (){
+        var sticky = document.getElementById('sticky');
+        if (window.pageYOffset > 10){
+            sticky.classList.add('sticky');
+
+        } 
+        else{
+            sticky.classList.remove('sticky');
+        }
+    }
+
+    window.onscroll = function(){
+        stickyMenu();
+    }
+    </script>
 </head>
 <body>
+    <!--
+<section> 
+        <h1> random </h1>
+    </section>
+    <script>
+        var section = document.querySelector('section')
+        var images = [
+            "url(../Images/img1.jpg)",
+            "url(../Images/test-image.png)"
+        ]
+        setInterval (function (){
+            var bg = images [Math.floor(Math.random()* images.length)]
+            console.log(bg)
+            section.style.background = bg
+        }, 1000)
+
+    </script>
+    -->
+    <div class = "section-top"> 
+    </div>
+    
     <div class = "parallax">
         <div class = "title">JWagPics</div>
 
@@ -24,8 +59,6 @@
             <a href = "contact.html" class = "a-menu"> <li>Contact </li></a>
         </u1>
     </div>
-
-
 
 
 </body>
