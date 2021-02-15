@@ -2,7 +2,8 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 5% 5%;
+    margin: 0 5%;
+    margin-bottom: 5%
 }
 
 .column {

@@ -31,8 +31,7 @@ body {
 .menu{
     background-color: rgb(230, 230, 230);
     text-align: center;
-    position: relative;
-
+    z-index: 1;
 }
 .menu-u1{
     margin: 0;

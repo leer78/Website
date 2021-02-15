@@ -9,6 +9,25 @@
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
 
+
+
+    <script>
+        function stickyMenu() {
+            var sticky = document.getElementById('sticky');
+            if (window.pageYOffset > 10) {
+                sticky.classList.add('sticky');
+
+            }
+            else {
+                sticky.classList.remove('sticky');
+            }
+        }
+
+        window.onscroll = function () {
+            stickyMenu();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -16,13 +35,23 @@
         <div class="title">JWagPics</div>
 
     </div>
-    <div class = "menu" id = "sticky">
-        <u1 class = "menu-u1">
-            <a href = "home.html" class = "a-menu"> <li>Home </li></a>
-            <a href = "gallery.html" class = "a-menu" id = "current-page"> <li>Photo Gallery </li></a>
-            <a href = "#" class = "a-menu"> <li>Buy </li></a>
-            <a href = "#" class = "a-menu"> <li>About Me </li></a>
-            <a href = "contact.html" class = "a-menu"> <li>Contact </li></a>
+    <div class="menu" id="sticky">
+        <u1 class="menu-u1">
+            <a href="home.html" class="a-menu">
+                <li>Home </li>
+            </a>
+            <a href="gallery.html" class="a-menu" id="current-page">
+                <li>Photo Gallery </li>
+            </a>
+            <a href="#" class="a-menu">
+                <li>Buy </li>
+            </a>
+            <a href="#" class="a-menu">
+                <li>About Me </li>
+            </a>
+            <a href="contact.html" class="a-menu">
+                <li>Contact </li>
+            </a>
         </u1>
     </div>
 
@@ -134,18 +163,23 @@
         </div>
 
 
-        
-       
-        </div>
+
+
+    </div>
 
 
 
-        <!--- <img src = "..\Images/test-image.png" class = "image">-->
+    <!--- <img src = "..\Images/test-image.png" class = "image">-->
 
 
 
 
     </div>
+
+
+
+
+
 
 
 
