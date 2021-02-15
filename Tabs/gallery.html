@@ -27,6 +27,25 @@
         }
     </script>
 
+
+
+    <script>
+        function stickyMenu() {
+            var sticky = document.getElementById('sticky');
+            if (window.pageYOffset > 10) {
+                sticky.classList.add('sticky');
+
+            }
+            else {
+                sticky.classList.remove('sticky');
+            }
+        }
+
+        window.onscroll = function () {
+            stickyMenu();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -34,13 +53,23 @@
         <div class="title">JWagPics</div>
 
     </div>
-    <div class = "menu" id = "sticky">
-        <u1 class = "menu-u1">
-            <a href = "home.html" class = "a-menu"> <li>Home </li></a>
-            <a href = "gallery.html" class = "a-menu" id = "current-page"> <li>Photo Gallery </li></a>
-            <a href = "#" class = "a-menu"> <li>Buy </li></a>
-            <a href = "#" class = "a-menu"> <li>About Me </li></a>
-            <a href = "contact.html" class = "a-menu"> <li>Contact </li></a>
+    <div class="menu" id="sticky">
+        <u1 class="menu-u1">
+            <a href="home.html" class="a-menu">
+                <li>Home </li>
+            </a>
+            <a href="gallery.html" class="a-menu" id="current-page">
+                <li>Photo Gallery </li>
+            </a>
+            <a href="#" class="a-menu">
+                <li>Buy </li>
+            </a>
+            <a href="#" class="a-menu">
+                <li>About Me </li>
+            </a>
+            <a href="contact.html" class="a-menu">
+                <li>Contact </li>
+            </a>
         </u1>
     </div>
 
@@ -83,110 +112,141 @@
     <div class="row">
 
         <div class="column">
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
+
+
 
 
         <div class="column">
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
+
+
+
+
+
 
         <div class="column">
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
 
 
-            <div class="image">
-                <img class="image__img" src="..\Images/test-image.png" alt="Test">
-                <div class="image__overlay image__overlay--blur">
-                    <div class="image__title">PICTURE NAME</div>
-                    <p class="image__description">NAME OF BIRD</p>
+            <a href="buy.html?myVar=..\Images/test-image-2.png">
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
         </div>
 
 
 
-        <!--- <img src = "..\Images/test-image.png" class = "image">-->
+    </div>
+
+
+
+    <!--- <img src = "..\Images/test-image.png" class = "image">-->
 
 
 
 
     </div>
+
+
+
+
+
 
 
 
