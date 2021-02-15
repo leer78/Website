@@ -63,11 +63,11 @@
 
 .image__title {
     text-align: center;
-    font-size: 250%;
-    font-weight: 100;
+    font-size: 2vw;
+    font-weight: 5vw;
 }
 
 .image__description {
-    font-size: 1.25em;
-    margin-top: 0.25em;
+    font-size: 1.25vw;
+    margin-top: 0.25vw;
 }
