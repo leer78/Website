@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\galleryStyle.css">
+    <link rel="stylesheet" href="..\style.css">
+    <title></title>
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+
+
+
+    <script>
+        function stickyMenu() {
+            var sticky = document.getElementById('sticky');
+            if (window.pageYOffset > 10) {
+                sticky.classList.add('sticky');
+
+            }
+            else {
+                sticky.classList.remove('sticky');
+            }
+        }
+
+        window.onscroll = function () {
+            stickyMenu();
+        }
+    </script>
+
+</head>
+
+<body>
+    var abcFromUrl = Request.QueryString["myVar"] ?? string.Empty;
+    <p>abcFromUrl</p>
+
+
+</body>
