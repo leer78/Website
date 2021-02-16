@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\galleryStyle.css">
     <link rel="stylesheet" href="..\style.css">
+    <link rel="stylesheet" href="..\buyStyle.css">
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
 
@@ -26,13 +27,26 @@
         window.onscroll = function () {
             stickyMenu();
         }
+
+
+
+
+        function getImage() {
+                var img__name = localStorage.getItem("image");
+                var name = localStorage.getItem("name");
+                var description = localStorage.getItem("description");
+                var image = document.getElementById('buyImg');
+                image.src = img__name;
+        }
+
+
+
     </script>
 
 </head>
 
-<body>
-    var abcFromUrl = Request.QueryString["myVar"] ?? string.Empty;
-    <p>abcFromUrl</p>
+<body  onload="getImage()">
+    <img class="image__img" id="buyImg" src="..\Images/error.jpg">
 
 
 </body>

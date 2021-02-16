@@ -7,29 +7,12 @@
     <link rel="stylesheet" href="..\galleryStyle.css">
     <link rel="stylesheet" href="..\style.css">
     <link rel="stylesheet" href="..\footer.css">
-    <link rel = "stylesheet" type = "text/css" href = "footer/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css">
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-    <script> 
-        function stickyMenu (){
-            var sticky = document.getElementById('sticky');
-            if (window.pageYOffset > 10){
-                sticky.classList.add('sticky');
-    
-            } 
-            else{
-                sticky.classList.remove('sticky');
-            }
-        }
-    
-        window.onscroll = function(){
-            stickyMenu();
-        }
-    </script>
-
-
-
+    <script src="..\galleryData.js"></script>
     <script>
+
         function stickyMenu() {
             var sticky = document.getElementById('sticky');
             if (window.pageYOffset > 10) {
@@ -44,7 +27,13 @@
         window.onscroll = function () {
             stickyMenu();
         }
+
+       
+
     </script>
+
+
+
 
 </head>
 
@@ -73,37 +62,37 @@
         </u1>
     </div>
 
-    <div class = "footer"> 
-        <div class = "inner-footer">
-            <div class = "logo">
-                <img src = "..\Images/logo.png">
+    <div class="footer">
+        <div class="inner-footer">
+            <div class="logo">
+                <img src="..\Images/logo.png">
             </div>
-            <div class = "footer-third">
+            <div class="footer-third">
                 <h1>Follow Me</h1>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-twitter"></i> twitter link</a></li>
-                <li><a href = "#"><i class = "fab fa-youtube"></i> youtube link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i> twitter link</a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i> youtube link</a></li>
 
             </div>
-            <div class = "footer-third">
+            <div class="footer-third">
                 <h1>Follow Me</h1>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
 
             </div>
-            <div class = "footer-third">
+            <div class="footer-third">
                 <h1>Follow Me</h1>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
 
             </div>
-            <div class = "footer-third">
+            <div class="footer-third">
                 <h1>Follow Me</h1>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
-                <li><a href = "#"><i class = "fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i> instagram link</a></li>
 
             </div>
         </div>
@@ -112,7 +101,7 @@
     <div class="row">
 
         <div class="column">
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", " Moustache Man ", " Has funny moustache ")' >
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
@@ -124,9 +113,9 @@
 
 
 
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image.png", "image 1", "sample image 1")' >
                 <div class="image">
-                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
+                    <img class="image__img" src="..\Images/test-image.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
                         <div class="image__title">PICTURE NAME</div>
                         <p class="image__description">NAME OF BIRD</p>
@@ -136,7 +125,7 @@
 
 
 
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", "image 2", "sample image")' >
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
@@ -152,7 +141,19 @@
 
 
         <div class="column">
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-3.png", "image 3", "sample image 3")' >
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image-3.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", "image 2", "sample image")' >
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
@@ -164,19 +165,7 @@
 
 
 
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
-                <div class="image">
-                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
-                    <div class="image__overlay image__overlay--blur">
-                        <div class="image__title">PICTURE NAME</div>
-                        <p class="image__description">NAME OF BIRD</p>
-                    </div>
-                </div>
-            </a>
-
-
-
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", "image 2", "sample image")' >             
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
@@ -194,7 +183,19 @@
 
 
         <div class="column">
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image.png", "image 1", "sample image 1")' >        
+                <div class="image">
+                    <img class="image__img" src="..\Images/test-image.png" alt="Test">
+                    <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">PICTURE NAME</div>
+                        <p class="image__description">NAME OF BIRD</p>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", "image 2", "sample image")' >  
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
@@ -206,19 +207,7 @@
 
 
 
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
-                <div class="image">
-                    <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
-                    <div class="image__overlay image__overlay--blur">
-                        <div class="image__title">PICTURE NAME</div>
-                        <p class="image__description">NAME OF BIRD</p>
-                    </div>
-                </div>
-            </a>
-
-
-
-            <a href="buy.html?myVar=..\Images/test-image-2.png">
+            <a  href="buy.html" onClick='dataSet("..\\Images/test-image-2.png", "image 2", "sample image")' >                
                 <div class="image">
                     <img class="image__img" src="..\Images/test-image-2.png" alt="Test">
                     <div class="image__overlay image__overlay--blur">
