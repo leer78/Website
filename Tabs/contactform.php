@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['submit'])){
+    echo "My first PHP script!";
     $name = $_POST['name'];
     $subject = $_POST['subject'];
     $mailFrom = $_POST['mail'];
