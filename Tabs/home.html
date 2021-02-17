@@ -3,26 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\style.css">
-    <link rel="stylesheet" href="..\homeStyle.css">
+    <link rel="stylesheet" href="..\Style/style.css">
+    <link rel="stylesheet" href="..\Style/homeStyle.css">
     <title></title>
     <script src = "https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-    <script> 
-    function stickyMenu (){
-        var sticky = document.getElementById('sticky');
-        if (window.pageYOffset > 10){
-            sticky.classList.add('sticky');
-
-        } 
-        else{
-            sticky.classList.remove('sticky');
-        }
-    }
-
-    window.onscroll = function(){
-        stickyMenu();
-    }
-    </script>
+    <script src="..\Script/headerFooter.js"></script>
 </head>
 <body>
     <!--
