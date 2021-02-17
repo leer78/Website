@@ -72,7 +72,7 @@ body {
 
 
 .a-menu:after {    
-    bottom: 0;
+
     content: "";
     display: block;
     height: 2px;
