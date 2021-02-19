@@ -23,7 +23,7 @@
 
 </head>
 
-<body onresize="magnify()">
+<body onresize="magnify('buy_img', 3)">
 
 
     <div class="parallax">
@@ -92,6 +92,7 @@
         <img id="buy_img" class="image">
         <!--   <div id="myresult" class="img-zoom-result"></div>    -->
     </div>
+    <div id="glass" class="img_magnifier_glass"></div>
 
 
 
@@ -99,12 +100,8 @@
         
 
         /* Execute the magnify function: */
-        magnify("buy_img", 3);
+        magnify("buy_img", 3);  // change to magnify
         /* Specify the id of the image, and the strength of the magnifier glass: */
     </script>
-
-    <!--
-    <script>
-        imageZoom("buy_img", "myresult");
-    </script>-->
+    
 </body>

@@ -20,7 +20,7 @@ function setInfo() {
 
 
 function imageZoom(imgID, resultID) {
-    var img, lens, result, cx, cy;
+    var lens, result, cx, cy;
 
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)
     var image__width = localStorage.getItem("width");
@@ -85,3 +85,4 @@ function imageZoom(imgID, resultID) {
         return { x: x, y: y };
     }
 }
+

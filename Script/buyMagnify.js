@@ -17,29 +17,36 @@ function setInfo() {
     document.getElementById("description__text").innerHTML = description; //Sets the description sent by clicking picture
 }
 
+//function setMagnify(imgID, zoom) {
+  //  glass.setAttribute("class", "img_magnifier_glass");
+    //magnify(imgID, zoom);
+//}
 
 function magnify(imgID, zoom) {
-    var glass, w, h, bw;
+    var w, h, bw; //add glass here, remove from params
     //img = document.getElementById(imgID);
-
+    var glass = document.getElementById("glass");
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)
-    var img = document.getElementById('buy_img');
+    var img = document.getElementById(imgID);
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
+
 
     img.width = (window.innerWidth * 0.2);
     img.height = img.width * ratio;
 
 
+
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
 
     /* Create magnifier glass: */
-    glass = document.createElement("DIV");
-    glass.setAttribute("class", "img_magnifier_glass");
+    // glass = document.createElement("DIV");
+    //glass.setAttribute("class", "img_magnifier_glass");
+    var magnifyWidth = window.innerWidth / 16.8;
+
     glass.style.width = magnifyWidth + "px";
     glass.style.height = magnifyWidth + "px";
 
 
-    var magnifyWidth = window.innerWidth / 16.8;
 
 
     /* Insert magnifier glass: */
