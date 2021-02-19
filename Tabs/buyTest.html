@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\Style/style.css">
     <link rel="stylesheet" href="..\Style/footer.css">
-    <link rel="stylesheet" href="..\Style/buyStyle.css">
+    <link rel="stylesheet" href="..\Style/buyTestStyle.css">
 
     <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css">
 
@@ -14,16 +14,16 @@
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
     <script src="..\Script/headerFooter.js"></script>
-    <script src="..\Script/buyPage.js"></script>
+    <script src="..\Script/buyMagnify.js"></script>
 
- 
+
 
 
 
 
 </head>
 
-<body onload="setInfo()">
+<body onresize="magnify()">
 
 
     <div class="parallax">
@@ -88,30 +88,23 @@
         </div>
     </div>
 
-    <div class="row">
-
-        <div class="column">
-            <div class="img-zoom-container">
-                <!-- <img class="image__background" src="..\Images/error.jpg"> -->
-                <img class="image__img" id="buyImg" src="..\Images/error.jpg" onmouseover="hover();"
-                    onmouseout="unhover();">
-                <div id="myresult" class="img-zoom-result"></div>
-
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="info">
-                <h1 style="color:black" class="title"><span id="title__text"></span></h1>
-                <p class='description'><span id="description__text"></span> </p>
-            </div>
-
-
-        </div>
+    <div class="img-zoom-container">
+        <img id="buy_img" class="image">
+        <!--   <div id="myresult" class="img-zoom-result"></div>    -->
     </div>
 
 
+
     <script>
-        imageZoom("image__img", "myresult");
+        
+
+        /* Execute the magnify function: */
+        magnify("buy_img", 3);
+        /* Specify the id of the image, and the strength of the magnifier glass: */
     </script>
+
+    <!--
+    <script>
+        imageZoom("buy_img", "myresult");
+    </script>-->
 </body>

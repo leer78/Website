@@ -1,3 +1,6 @@
+
+
+/*
 function hover() {
     var image = document.getElementById('buyImg');
     image.src = "..\\Images/error.jpg";     // By defualt changes to error image when hovering. change to proper one    
@@ -8,7 +11,7 @@ function unhover() {
     var image = document.getElementById('buyImg');
     image.src = img__name;
 }
-
+*/
 
 
 function setInfo() {
@@ -22,3 +25,5 @@ function setInfo() {
     document.getElementById("title__text").innerHTML = name; //Sets the title sent by clicking picture
     document.getElementById("description__text").innerHTML = description; //Sets the description sent by clicking picture
 }
+
+
