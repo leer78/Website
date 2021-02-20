@@ -2,19 +2,12 @@
 
 
 function setInfo() {
-    var img__name = localStorage.getItem("image");  // Saves the image name (directory)
     var name = localStorage.getItem("name");    // saves the image title
     var description = localStorage.getItem("description"); //Saves the image decription
 
-    var image = document.getElementById('buy_img');
 
-    image.src = img__name;  // saves the image source to the proper one saved when the page is loaded
-    image.width = (window.innerWidth * 0.2);
-    image.height = image.width * ratio;
-
-
-    document.getElementById("title__text").innerHTML = name; //Sets the title sent by clicking picture
-    document.getElementById("description__text").innerHTML = description; //Sets the description sent by clicking picture
+    document.getElementById("image_title").innerHTML = name; //Sets the title sent by clicking picture
+    document.getElementById("image_description").innerHTML = description; //Sets the description sent by clicking picture
 }
 
 
@@ -29,6 +22,7 @@ function disappear(){
 }
 
 function magnify(imgID, zoom) {
+    setInfo();
     var w, h, bw;
     var glass = document.getElementById("glass");   // Created empty DIV. cannot create new one in this function or a new one would be made every time the screen gets resized
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)
@@ -38,7 +32,6 @@ function magnify(imgID, zoom) {
 
     img.width = (window.innerWidth * 0.2);
     img.height = img.width * ratio;
-
 
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded

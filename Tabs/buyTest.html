@@ -88,11 +88,23 @@
         </div>
     </div>
 
-    <div class="img-zoom-container" >
-        <img id="buy_img" class="image" onmouseover="appear()">
-        <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
+    <div class="row">
+        <h1 class="image_title"><span id="image_title"></span></h1>
     </div>
 
+    <div class="row">
+        <div class="column">
+            <div class="img-zoom-container">
+                <img id="buy_img" class="image" onmouseover="appear()">
+                <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
+                <p class="caption">Hover Me!</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <p class="description"><span id="image_description"></span></p>
+        </div>
+    </div>
 
 
     <script>
