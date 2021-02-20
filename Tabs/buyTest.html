@@ -88,20 +88,15 @@
         </div>
     </div>
 
-    <div class="img-zoom-container">
-        <img id="buy_img" class="image">
-        <!--   <div id="myresult" class="img-zoom-result"></div>    -->
+    <div class="img-zoom-container" >
+        <img id="buy_img" class="image" onmouseover="appear()">
+        <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
     </div>
-    <div id="glass" class="img_magnifier_glass"></div>
 
 
 
     <script>
-        
-
-        /* Execute the magnify function: */
-        magnify("buy_img", 3);  // change to magnify
-        /* Specify the id of the image, and the strength of the magnifier glass: */
+        magnify("buy_img", 2);  // First is image ID, second is magnifying strength
     </script>
-    
+
 </body>

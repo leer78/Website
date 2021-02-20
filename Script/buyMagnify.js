@@ -17,15 +17,20 @@ function setInfo() {
     document.getElementById("description__text").innerHTML = description; //Sets the description sent by clicking picture
 }
 
-//function setMagnify(imgID, zoom) {
-  //  glass.setAttribute("class", "img_magnifier_glass");
-    //magnify(imgID, zoom);
-//}
+
+function appear(){
+    var glass = document.getElementById("glass");
+    glass.style.visibility = "visible";
+}
+
+function disappear(){
+    var glass = document.getElementById("glass");
+    glass.style.visibility = "hidden";
+}
 
 function magnify(imgID, zoom) {
-    var w, h, bw; //add glass here, remove from params
-    //img = document.getElementById(imgID);
-    var glass = document.getElementById("glass");
+    var w, h, bw;
+    var glass = document.getElementById("glass");   // Created empty DIV. cannot create new one in this function or a new one would be made every time the screen gets resized
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)
     var img = document.getElementById(imgID);
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
@@ -38,9 +43,6 @@ function magnify(imgID, zoom) {
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
 
-    /* Create magnifier glass: */
-    // glass = document.createElement("DIV");
-    //glass.setAttribute("class", "img_magnifier_glass");
     var magnifyWidth = window.innerWidth / 16.8;
 
     glass.style.width = magnifyWidth + "px";

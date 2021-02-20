@@ -28,9 +28,11 @@
 }
 
 .img_magnifier_glass {
+    visibility: hidden;
     position: absolute;
     border: 1px solid gray;
     cursor: none;
    /* width: 100px;
     height: 100px;*/
 }
+
