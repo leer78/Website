@@ -14,16 +14,16 @@
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
     <script src="..\Script/headerFooter.js"></script>
-    <script src="..\Script/buyPage.js"></script>
+    <script src="..\Script/buyMagnify.js"></script>
 
- 
+
 
 
 
 
 </head>
 
-<body onload="setInfo()">
+<body onresize="magnify('buy_img', 3)">
 
 
     <div class="parallax">
@@ -89,29 +89,28 @@
     </div>
 
     <div class="row">
+        <h1 class="image_title"><span id="image_title"></span></h1>
+    </div>
 
+    <div class="row">
         <div class="column">
             <div class="img-zoom-container">
-                <!-- <img class="image__background" src="..\Images/error.jpg"> -->
-                <img class="image__img" id="buyImg" src="..\Images/error.jpg" onmouseover="hover();"
-                    onmouseout="unhover();">
-                <div id="myresult" class="img-zoom-result"></div>
-
+                <img id="buy_img" class="image" onmouseover="appear()">
+                <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
+                <p class="caption">Hover Me!</p>
             </div>
         </div>
 
         <div class="column">
-            <div class="info">
-                <h1 style="color:black" class="title"><span id="title__text"></span></h1>
-                <p class='description'><span id="description__text"></span> </p>
-            </div>
-
-
+            <!-- <p class="price"><span id="image_price"></span></p>    INCLUDE PRICE IN SEPERATE BOX ABOVE--->
+            <p class = "price">DEMO PRICE</p>
+            <p class="description"><span id="image_description"></span></p>
         </div>
     </div>
 
 
     <script>
-        imageZoom("image__img", "myresult");
+        magnify("buy_img", 2);  // First is image ID, second is magnifying strength
     </script>
+
 </body>
