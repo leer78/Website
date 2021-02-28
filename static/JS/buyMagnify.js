@@ -48,7 +48,7 @@ function magnify(imgID, zoom) {
     img.parentElement.insertBefore(glass, img);
 
     /* Set background properties for the magnifier glass: */
-    glass.style.backgroundImage = "url('" + img.src + "')";
+    glass.style.backgroundImage = "url('" + img.src + "')";         // PROBABLY HAVE TO CHANGE THIS FOR THE FLASK TO WORK
     glass.style.backgroundRepeat = "no-repeat";
     glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
     bw = 3;

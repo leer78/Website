@@ -4,79 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\Style/style.css">
-    <link rel="stylesheet" href="..\Style/footer.css">
-    <link rel="stylesheet" href="..\Style/contactStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutMeStyle.css') }}">
     <link rel = "stylesheet" type = "text/css" href = "footer/css/font-awesome.min.css">
+
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-    <script src="..\Script/headerFooter.js"></script>
-   
-
-        
+    <script src="{{ url_for('static', filename='JS/headerFooter.js') }}"></script>
+    
     <div class="parallax">
         <div class="title">JWagPics</div>
 
     </div>
     <div class="menu" id="sticky">
         <u1 class="menu-u1">
-            <a href="home.html" class="a-menu">
+            <a href="home" class="a-menu">
                 <li>Home </li>
             </a>
-            <a href="gallery.html" class = "a-menu">
+            <a href="gallery" class = "a-menu">
                 <li>Photo Gallery </li>
             </a>
-            <a href="buy.html" class="a-menu">
+            <a href="buy" class="a-menu">
                 <li>Buy </li>
             </a>
-            <a href="#" class="a-menu">
+            <a href="aboutMe" class="a-menu">
                 <li>About Me </li>
             </a>
-            <a href="contact.html" class="a-menu" class="a-menu" id="current-page">
+            <a href="contact" class="a-menu" class="a-menu" id="current-page">
                 <li>Contact </li>
             </a>
         </u1>
     </div>
-
 </head>
 
 <body>
-    <div class = "contact-title"> 
-        <h1> Say Hello! </h1>
-        <h2> I'll be here to help</h2>
-    </div>
 
-    <div class = "contact-form">
-        <form class = "contact-form" action = "contactform.php" method ="post">
-            <input type = "text" name ="name" class = "form-control" placeholder = "Full Name"><br>
-            <input type = "text" name ="mail" class = "form-control" placeholder = "Your Email"><br>
-            <input type = "text" name ="subject" class = "form-control" placeholder = "Subject"><br>
-            <textarea name = "message"  class = "form-control" placeholder = "message"></textarea><br>
+   <div class = "about-me">
+        <h2>About me</h2>
+
+        <div class = "row">
+            <div class = "col">
+                <img src = "../Images/logo.png">
+            </div>
+            <div class = "col">
+                <h4> James Wagner</h4>
+                <p>
+                    obamiumwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
     
-            <button type = "submit" name = "submit" class = "form-control submit"> submit </button>
-        </form>
-    </div>
+                </p>
+               
+            </div>
 
 
-<!---
 
-       <div class = "email-background">
-        <p> send email</p>
-        <form class = "contact-form" action = "contactform.php" method ="post">
-            <input type = "text" name ="name" placeholder = "Full Name">
-            <input type = "text" name ="mail" placeholder = "Your Email">
-            <input type = "text" name ="subject" placeholder = "Subject">
-            <textarea name = "message" placeholder = "message"></textarea>
-    
-            <button type = "submit" name = "submit"> send mail</button>
-        </form>
-    </div>
-
-
--->
- 
+        </div>
+        
+        
+   </div>
 
 </body>
+
 <div class = "footer"> 
     <div class = "inner-footer">
         <div class = "logo">

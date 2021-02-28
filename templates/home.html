@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="..\Style/style.css">
-    <link rel="stylesheet" href="..\Style/homeStyle.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homeStyle.css') }}">
     <title></title>
     <script src = "https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-    <script src="..\Script/headerFooter.js"></script>
+    <script src="{{ url_for('static', filename='JS/headerFooter.js') }}" ></script>
 </head>
 <body>
     <!--
@@ -37,11 +37,11 @@
     
     <div class = "menu" id = "sticky">
         <u1 class = "menu-u1">
-            <a href = "home.html" class = "a-menu"> <li>Home </li></a>
-            <a href = "gallery.html" class = "a-menu"> <li>Photo Gallery </li></a>
-            <a href = "#" class = "a-menu"> <li>Buy </li></a>
-            <a href = "aboutme.html" class = "a-menu"> <li>About Me </li></a>
-            <a href = "contact.html" class = "a-menu"> <li>Contact </li></a>
+            <a href = "home" class = "a-menu"> <li>Home </li></a>
+            <a href = "gallery" class = "a-menu"> <li>Photo Gallery </li></a>
+            <a href = "buy" class = "a-menu"> <li>Buy </li></a>
+            <a href = "aboutMe" class = "a-menu"> <li>About Me </li></a>
+            <a href = "contact" class = "a-menu"> <li>Contact </li></a>
         </u1>
     </div>
 
