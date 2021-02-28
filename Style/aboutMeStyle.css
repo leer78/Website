@@ -1,84 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    box-sizing: border-box;
-}
 
 body{
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-
-}
-.about-section{
-    position: relative;
-    left: 10vw;
-    width: 80%;
-    background-color: white;
-    background: url(../Images/forest.jpg) no-repeat left;
-    background-size: 55%;
-    background-color: white;
+    background-size: cover;
+    font-family: tahoma;
     overflow: hidden;
-    padding: 100px 0;
+    margin: 0;
+    font-family: 'DIN Alternate Bold', sans-serif;
 }
 
-.inner-container{
-    
-    width: 55%;
-    float: right;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 150px;
-    border: 1px solid rgb(31, 31, 31);
+.col{
+    float: left;
+    width: 50%;
+    padding: 10px;
 }
 
-.inner-container h1{
-    font-size: 30px;
-    font-weight: 900;
-    margin-bottom: 30px;
+.col img{
+    width: 25%;
 }
-
-text{
-    font-size: 13px;
-    color: black;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 4px;
-}
-
-.about-section .inner-container .pic img{
-    display: flex;
-    width: 20%;
-    height: auto;
-    float: right;
-
-
-    
-}
-
-
-@media screen and (max-width: 1200px){
-    .inner-container{
-        padding:30px;
-    }
-
-}
-
-@media screen and (max-width: 1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
+.row:after{
+    content: " ";
+    display: table;
+    clear:both;
 }
