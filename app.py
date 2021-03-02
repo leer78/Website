@@ -26,16 +26,20 @@ def buy():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        message = "NAME: " + str(request.form.get('name'))
-        message += "EMAIL: " + str(request.form.get('mail'))
-        message += str(request.form.get('message'))
+        name =  str(request.form.get('name'))
+        email =  str(request.form.get('mail'))
+        message = str(request.form.get('message'))
+
+     
+
+        subject = str(request.form.get("subject"))
 
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         
         server.login("monkeymandan15@gmail.com", "MonkeyMan#15*")  # CHANGE TO ENVIRONMENTAL VARIABLE BEFORE PUSHING
 
-        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", message)
+        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", (name + email +message))
 
         #server.sendmail("monkeymandan15@gmail.com", email, name + ", Thank you for signing up")  -- This one sends the user a message
 
