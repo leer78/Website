@@ -30,16 +30,20 @@ def contact():
         email =  str(request.form.get('mail'))
         message = str(request.form.get('message'))
 
+
+
+        f = open("mailList.txt", "a")
+        f.write(email)
+        f.write("\n")
+        f.close()
+
      
-
-        subject = str(request.form.get("subject"))
-
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         
         server.login("monkeymandan15@gmail.com", "MonkeyMan#15*")  # CHANGE TO ENVIRONMENTAL VARIABLE BEFORE PUSHING
 
-        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", (name + email +message))
+        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", (name +"|"+email + "|"+message)) # Lines used to split them later if needed in data base
 
         #server.sendmail("monkeymandan15@gmail.com", email, name + ", Thank you for signing up")  -- This one sends the user a message
 
