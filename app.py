@@ -1,10 +1,13 @@
 from flask import Flask, render_template, url_for, request
 
+
 import smtplib, ssl
 
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
+mail = Mail()
+mail.init_app(app)
 
 @app.route('/')
 @app.route('/aboutMe')
@@ -26,8 +29,6 @@ def gallery():
 @app.route('/home')
 def home():
     return render_template('home.html')
-
-    
 
 
 if __name__ == "__main__":
