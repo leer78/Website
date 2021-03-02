@@ -1,30 +1,51 @@
 from flask import Flask, render_template, url_for, request
 
 
-import smtplib, ssl
+import smtplib
+import ssl
 
 from flask_mail import Mail, Message
+
 
 app = Flask(__name__)
 mail = Mail()
 mail.init_app(app)
+
 
 @app.route('/')
 @app.route('/aboutMe')
 def aboutMe():
     return render_template('aboutMe.html')
 
+
 @app.route('/buy')
 def buy():
     return render_template('buy.html')
 
-@app.route('/contact')
+
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        message = "NAME: " + str(request.form.get('name'))
+        message += "EMAIL: " + str(request.form.get('mail'))
+        message += str(request.form.get('message'))
+
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        
+        server.login("monkeymandan15@gmail.com", "MonkeyMan#15*")  # CHANGE TO ENVIRONMENTAL VARIABLE BEFORE PUSHING
+
+        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", message)
+
+        #server.sendmail("monkeymandan15@gmail.com", email, name + ", Thank you for signing up")  -- This one sends the user a message
+
     return render_template('contact.html')
+
 
 @app.route('/gallery')
 def gallery():
     return render_template('gallery.html')
+
 
 @app.route('/home')
 def home():
@@ -32,4 +53,4 @@ def home():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(debug=True)
