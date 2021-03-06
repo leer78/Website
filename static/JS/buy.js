@@ -1,7 +1,6 @@
 // This file is for the magnify effect
 
 function setInfo() {
-    console.log("IM HERE");
     var name = localStorage.getItem("name");    // saves the image title
     var description = localStorage.getItem("description"); //Saves the image decription
 
@@ -10,12 +9,12 @@ function setInfo() {
 }
 
 
-function appear(){
+function appear() {
     var glass = document.getElementById("glass");
     glass.style.visibility = "visible";
 }
 
-function disappear(){
+function disappear() {
     var glass = document.getElementById("glass");
     glass.style.visibility = "hidden";
 }
@@ -28,12 +27,23 @@ function magnify(imgID, zoom) {
     var img = document.getElementById(imgID);
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
 
-    img.width = (window.innerWidth * 0.2);
-    img.height = img.width * ratio;
+    //img.width = (window.innerWidth * 0.6);
+    //img.height = img.width * ratio;
+
+    img.height = (window.innerHeight * 0.75);
+    img.width = img.height * 1 / ratio;
+
+    if (img.width > window.innerWidth * 0.55) {
+        img.width = window.innerWidth * 0.55;
+        img.height = img.width * ratio;
+    }
+
+
+
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
 
-    var magnifyWidth = window.innerWidth / 16.8;
+    var magnifyWidth = window.innerWidth / 12;
 
     glass.style.width = magnifyWidth + "px";
     glass.style.height = magnifyWidth + "px";

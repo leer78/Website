@@ -1,14 +1,18 @@
-
+*{
+    overflow-y: hidden;
+}
 .img-zoom-container {
     position: relative;
 }
 
 .image {
+    margin: 5%;
     border-width: 1px;
     border-style: solid;
 }
 
 .img_magnifier_glass {
+    margin: 5%;
     visibility: hidden;
     position: absolute;
     border: 1px solid gray;
