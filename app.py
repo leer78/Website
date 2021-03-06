@@ -5,6 +5,8 @@ import smtplib
 import ssl
 
 from flask_mail import Mail, Message
+from email.mime.text  import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 app = Flask(__name__)
@@ -28,8 +30,28 @@ def contact():
     if request.method == 'POST':
         name =  str(request.form.get('name'))
         email =  str(request.form.get('mail'))
+        subject = str(request.form.get('subject'))
         message = str(request.form.get('message'))
 
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = subject
+        msg["From"] = "monkeymandan15@gmail.com"
+        msg["To"] = "email2074@gmail.com"
+
+        companyName = " JWag Pics"
+        html = """\
+            <html>
+            <body>
+                <p>Hi, {companyName} <br> 
+                {name} at {email} writes {subject}<br>
+                {message}
+                </p>
+            </body>
+            </html>
+            """.format(companyName = companyName, name = name, email = email, subject = subject, message = message)
+        part1 = MIMEText(html, "html")
+
+        msg.attach(part1)
 
 
         f = open("mailList.txt", "a")
@@ -43,10 +65,11 @@ def contact():
         
         server.login("monkeymandan15@gmail.com", "MonkeyMan#15*")  # CHANGE TO ENVIRONMENTAL VARIABLE BEFORE PUSHING
 
-        server.sendmail("monkeymandan15@gmail.com","monkeymandan15@gmail.com", (name +"|"+email + "|"+message)) # Lines used to split them later if needed in data base
+        #server.sendmail("monkeymandan15@gmail.com","email2074@gmail.com", (name + ', '+email + ", <br>"+subject + '<br> message')) # Lines used to split them later if needed in data base
 
         #server.sendmail("monkeymandan15@gmail.com", email, name + ", Thank you for signing up")  -- This one sends the user a message
 
+        server.sendmail("monkeymandan15@gmail.com","email2074@gmail.com", msg.as_string())
     return render_template('contact.html')
 
 
