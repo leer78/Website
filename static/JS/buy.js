@@ -20,7 +20,7 @@ function disappear() {
 }
 
 function magnify(imgID, zoom) {
-    setInfo();
+    //setInfo();
     var w, h, bw;
     var glass = document.getElementById("glass");   // Created empty DIV. cannot create new one in this function or a new one would be made every time the screen gets resized
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)

@@ -1,12 +1,14 @@
-*{
+* {
     overflow-y: hidden;
 }
+
 .img-zoom-container {
     position: relative;
 }
 
 .image {
-    margin: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
     border-width: 1px;
     border-style: solid;
 }
@@ -20,49 +22,9 @@
 }
 
 .caption {
+    margin-left: 5%;
     position: relative;
-    padding-left: 25%;
     font-size: 1.25vw;
     color: gray;
     z-index: -1;
 }
-
-.image_title {
-    text-align: center;
-    font-size: 3vw;
-    background-color: rgba(230, 230, 230, 0.5);
-    border-style: outset;
-    border-color: rgba(63, 61, 61, 0.5);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: 5%;
-}
-
-.price {
-    margin-left: 10%;
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-style: solid;
-    border-color: gray;
-    width: 50%;
-    min-height: 10%;
-    margin-bottom: 5%;
-    font-size: 2vw;
-}
-
-.description {
-    margin-left: 10%;
-    text-align: center;
-    padding-top: 20%;
-    padding-bottom: 1%;
-    border-style: solid;
-    border-color: gray;
-    width: 50%;
-    min-height: 100%;
-}
-

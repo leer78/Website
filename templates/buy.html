@@ -37,9 +37,6 @@
             <a href="gallery" class="a-menu" id="current-page">
                 <li>Photo Gallery </li>
             </a>
-            <a href="buy" class="a-menu">
-                <li>Buy </li>
-            </a>
             <a href="aboutMe" class="a-menu">
                 <li>About Me </li>
             </a>
@@ -56,9 +53,13 @@
 
 
     <div class="img-zoom-container">
-        <img id="buy_img" class="image" onmouseover="appear()">
+        <figure>
+            <img id="buy_img" class="image" onmouseover="appear()">
+            <figcaption class="caption">Hover Me!</figcaption>
+        </figure>
+        
         <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
-        <p class="caption">Hover Me!</p>
+        
     </div>
 
     <!-- <p class="price"><span id="image_price"></span></p>    INCLUDE PRICE IN SEPERATE BOX ABOVE
