@@ -1,13 +1,12 @@
 // This file is for the magnify effect
 
-
 function setInfo() {
+    console.log("IM HERE");
     var name = localStorage.getItem("name");    // saves the image title
     var description = localStorage.getItem("description"); //Saves the image decription
 
-
-    document.getElementById("image_title").innerHTML = name; //Sets the title sent by clicking picture
-    document.getElementById("image_description").innerHTML = description; //Sets the description sent by clicking picture
+    //document.getElementById("image_title").innerHTML = name; //Sets the title sent by clicking picture
+    //document.getElementById("image_description").innerHTML = description; //Sets the description sent by clicking picture    
 }
 
 
@@ -29,10 +28,8 @@ function magnify(imgID, zoom) {
     var img = document.getElementById(imgID);
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
 
-
     img.width = (window.innerWidth * 0.2);
     img.height = img.width * ratio;
-
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
 
@@ -40,9 +37,6 @@ function magnify(imgID, zoom) {
 
     glass.style.width = magnifyWidth + "px";
     glass.style.height = magnifyWidth + "px";
-
-
-
 
     /* Insert magnifier glass: */
     img.parentElement.insertBefore(glass, img);
