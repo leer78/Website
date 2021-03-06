@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/buyStyle.css') }}">
 
-    <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css"> -->
 
 
     <title></title>
@@ -88,26 +88,18 @@
         </div>
     </div>
 
-    <div class="row">
-        <h1 class="image_title"><span id="image_title"></span></h1>
+
+
+    <div class="img-zoom-container">
+        <img id="buy_img" class="image" onmouseover="appear()">
+        <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
+        <p class="caption">Hover Me!</p>
     </div>
 
-    <div class="row">
-        <div class="column">
-            <div class="img-zoom-container">
-                <img id="buy_img" class="image" onmouseover="appear()">
-                <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
-                <p class="caption">Hover Me!</p>
-            </div>
-        </div>
-
-        <div class="column">
-            <!-- <p class="price"><span id="image_price"></span></p>    INCLUDE PRICE IN SEPERATE BOX ABOVE--->
+    <!-- <p class="price"><span id="image_price"></span></p>    INCLUDE PRICE IN SEPERATE BOX ABOVE
             <p class = "price">DEMO PRICE</p>
             <p class="description"><span id="image_description"></span></p>
-        </div>
-    </div>
-
+--->
 
     <script>
         magnify("buy_img", 2);  // First is image ID, second is magnifying strength
