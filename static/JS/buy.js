@@ -4,8 +4,8 @@ function setInfo() {
     var name = localStorage.getItem("name");    // saves the image title
     var description = localStorage.getItem("description"); //Saves the image decription
 
-    //document.getElementById("image_title").innerHTML = name; //Sets the title sent by clicking picture
-    //document.getElementById("image_description").innerHTML = description; //Sets the description sent by clicking picture    
+    document.getElementById("image_price").innerHTML = name; //Sets the title sent by clicking picture
+    document.getElementById("image_description").innerHTML = description; //Sets the description sent by clicking picture    
 }
 
 
@@ -20,12 +20,14 @@ function disappear() {
 }
 
 function magnify(imgID, zoom) {
-    //setInfo();
+    setInfo();
     var w, h, bw;
     var glass = document.getElementById("glass");   // Created empty DIV. cannot create new one in this function or a new one would be made every time the screen gets resized
     var img__name = localStorage.getItem("image");  // Saves the image name (directory)
     var img = document.getElementById(imgID);
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
+    var img__container = document.getElementById("img-container");
+    var wrapper = document.getElementById("wrapper");
 
     //img.width = (window.innerWidth * 0.6);
     //img.height = img.width * ratio;
@@ -38,7 +40,11 @@ function magnify(imgID, zoom) {
         img.height = img.width * ratio;
     }
 
+    img__container.width = img.width + 20;
+    img__container.height = img.height + 20;
 
+    wrapper.style.gridTemplateColumns = (img.width+80) +"px"+" "+(window.innerWidth-img.width-20)+"px";
+    wrapper.style.gridTemplateRows = (img.height+150) +"px";
 
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
@@ -54,7 +60,7 @@ function magnify(imgID, zoom) {
     /* Set background properties for the magnifier glass: */
     glass.style.backgroundImage = "url('" + img.src + "')";         // PROBABLY HAVE TO CHANGE THIS FOR THE FLASK TO WORK
     glass.style.backgroundRepeat = "no-repeat";
-    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+    glass.style.backgroundSize = (img.width * zoom + 50) + "px " + (img.height * zoom-50) + "px";
     bw = 3;
     w = glass.offsetWidth / 2;
     h = glass.offsetHeight / 2;

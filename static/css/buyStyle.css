@@ -1,20 +1,28 @@
 * {
     overflow-y: hidden;
+    overflow-x:hidden;
 }
 
-.img-zoom-container {
+#wrapper{
+    display:grid;
+}
+
+.img-zoom-container {  
     position: relative;
 }
 
 .image {
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
     border-width: 1px;
     border-style: solid;
 }
 
 .img_magnifier_glass {
-    margin: 5%;
+    margin-top:5%;
+    margin-left:5%;
+    margin-right:5%;
     visibility: hidden;
     position: absolute;
     border: 1px solid gray;
@@ -27,4 +35,12 @@
     font-size: 1.25vw;
     color: gray;
     z-index: -1;
+}
+
+.pricing{
+    margin-top:5%;
+    margin-left: 5%;
+    margin-right:15%;
+    text-align: center;
+    border:5px solid black;
 }

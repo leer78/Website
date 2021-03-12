@@ -11,12 +11,12 @@
     <script src="{{ url_for('static', filename='JS/headerFooter.js') }}"></script>
     <script src="{{ url_for('static', filename='JS/buy.js') }}"></script>
 
-   <!-- <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="footer/css/font-awesome.min.css"> -->
 
 
     <title></title>
     <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
-  
+
 
 
 
@@ -28,7 +28,7 @@
 <body onresize="magnify('buy_img', 3)">
 
 
-   
+
     <div class="menu" id="sticky">
         <u1 class="menu-u1">
             <a href="home" class="a-menu">
@@ -48,24 +48,27 @@
 
 
 
-    
 
 
 
-    <div class="img-zoom-container">
-        <figure>
-            <img id="buy_img" class="image" onmouseover="appear()">
-            <figcaption class="caption">Hover Me!</figcaption>
-        </figure>
-        
-        <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
-        
+    <div id="wrapper">
+        <div class="img-zoom-container" id="img-container">
+            <figure>
+                <img id="buy_img" class="image" onmouseover="appear()">
+                <figcaption class="caption">Hover Me!</figcaption>
+            </figure>
+
+            <div id="glass" class="img_magnifier_glass" onmouseout="disappear()"></div>
+        </div>
+
+        <div class="pricing">
+            <p class="price"><span id="image_price"></span></p>
+            <p class="description"><span id="image_description"></span></p>
+        </div>
+
     </div>
 
-    <!-- <p class="price"><span id="image_price"></span></p>    INCLUDE PRICE IN SEPERATE BOX ABOVE
-            <p class = "price">DEMO PRICE</p>
-            <p class="description"><span id="image_description"></span></p>
---->
+
 
     <script>
         magnify("buy_img", 2);  // First is image ID, second is magnifying strength
