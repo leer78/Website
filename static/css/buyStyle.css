@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800');
+
 * {
     overflow-y: hidden;
     overflow-x:hidden;
@@ -23,6 +25,7 @@
     margin-top:5%;
     margin-left:5%;
     margin-right:5%;
+    margin-bottom: 5%;
     visibility: hidden;
     position: absolute;
     border: 1px solid gray;
@@ -38,9 +41,20 @@
 }
 
 .pricing{
-    margin-top:5%;
-    margin-left: 5%;
-    margin-right:15%;
+    margin-top: 5%;
+    margin-right:5%;
     text-align: center;
-    border:5px solid black;
+}
+
+.price{
+    text-transform: uppercase;
+    font-family:'Courier New Bold', monospace;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-size: 5vw;
+}
+
+.description{
+    padding-left: 15%;
+    padding-right: 15%;
 }

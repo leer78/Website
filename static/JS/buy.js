@@ -28,6 +28,7 @@ function magnify(imgID, zoom) {
     var ratio = localStorage.getItem("ratio"); //Saves the image ratio (width to height)
     var img__container = document.getElementById("img-container");
     var wrapper = document.getElementById("wrapper");
+    var img__description = document.getElementById("img-description");
 
     //img.width = (window.innerWidth * 0.6);
     //img.height = img.width * ratio;
@@ -43,8 +44,11 @@ function magnify(imgID, zoom) {
     img__container.width = img.width + 20;
     img__container.height = img.height + 20;
 
-    wrapper.style.gridTemplateColumns = (img.width+80) +"px"+" "+(window.innerWidth-img.width-20)+"px";
-    wrapper.style.gridTemplateRows = (img.height+150) +"px";
+    img__description.width = window.innerWidth - img__container.width;
+    img__description.height = img__container.height;
+
+    wrapper.style.gridTemplateColumns = (img__container.width+(window.innerWidth*0.1)) +"px"+" "+(window.innerWidth-img__container.width-(window.innerWidth*0.1))+"px";
+    wrapper.style.gridTemplateRows = (img__container.height+150) +"px";
 
 
     img.src = img__name;  // saves the image source to the proper one saved when the page is loaded
@@ -60,7 +64,7 @@ function magnify(imgID, zoom) {
     /* Set background properties for the magnifier glass: */
     glass.style.backgroundImage = "url('" + img.src + "')";         // PROBABLY HAVE TO CHANGE THIS FOR THE FLASK TO WORK
     glass.style.backgroundRepeat = "no-repeat";
-    glass.style.backgroundSize = (img.width * zoom + 50) + "px " + (img.height * zoom-50) + "px";
+    glass.style.backgroundSize = (img.width * zoom ) + "px " + (img.height * zoom) + "px";
     bw = 3;
     w = glass.offsetWidth / 2;
     h = glass.offsetHeight / 2;
