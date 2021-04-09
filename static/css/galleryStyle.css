@@ -6,7 +6,7 @@
     margin-bottom: 5%
 }
 
-.column {
+.col {
     flex: 20%;
     margin: 0 1%;
 }
