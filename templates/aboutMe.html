@@ -25,10 +25,10 @@
             <a href="gallery" class = "a-menu">
                 <li>Photo Gallery </li>
             </a>
-            <a href="aboutMe" class="a-menu">
+            <a href="aboutMe" class="a-menu"  id="current-page">
                 <li>About Me </li>
             </a>
-            <a href="contact" class="a-menu" class="a-menu" id="current-page">
+            <a href="contact" class="a-menu" class="a-menu">
                 <li>Contact </li>
             </a>
         </u1>
@@ -37,68 +37,33 @@
 
 <body>
 
+
+
    <div class = "about-me">
-        <h2>About me</h2>
-
-        <div class = "row">
-            <div class = "col">
-                <img src = "../static/images/logo.png">
-            </div>
-            <div class = "col">
-                <h4> James Wagner</h4>
-                <p>
-                    <div id="paypal-button"></div>
-                    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-                    <script>
-                      paypal.Button.render({
-                        // Configure environment
-                        env: 'sandbox',
-                        client: {
-                          sandbox: 'demo_sandbox_client_id',
-                          production: 'demo_production_client_id'
-                        },
-                        // Customize button (optional)
-                        locale: 'en_US',
-                        style: {
-                          size: 'medium',
-                          color: 'silver',
-                          shape: 'rect',
-                        },
-                    
-                        // Enable Pay Now checkout flow (optional)
-                        commit: true,
-                    
-                        // Set up a payment
-                        payment: function(data, actions) {
-                          return actions.payment.create({
-                            transactions: [{
-                              amount: {
-                                total: '0.01',
-                                currency: 'USD'
-                              }
-                            }]
-                          });
-                        },
-                        // Execute the payment
-                        onAuthorize: function(data, actions) {
-                          return actions.payment.execute().then(function() {
-                            // Show a confirmation message to the buyer
-                            window.alert('Thank you for your purchase!');
-                          });
-                        }
-                      }, '#paypal-button');
-                    
-                    </script>
-                        
-                    About Me (Fill In In Future Update)    
-                </p>
-               
-            </div>
-
-
-
-        </div>
-        
+      <header class='masthead'>
+        <p class='masthead-intro'>Hi I'm James</p>
+      </header>
+      <section class="introduction-section">
+          <h1>Introduction</h1>
+          <p>i james</p>
+          <p>i take pics</p>
+      </section>
+      <section class = "image-section">
+        <img src="..\static/images/forest.jpg">
+      </section>
+      <section class="location-section">
+          <h1>Where I am from</h1>
+          <p>wagner st</p>
+      </section>
+      <section class="questions-section">
+          <h1>A little bit more about me</h1>
+          <h2>Q1</h2>
+          <p>ans</p>
+          <h2>Q2</h2>
+          <p>ans</p>
+          <h2>Q3</h2>
+          <p>ans</p>
+      </section>
         
    </div>
 

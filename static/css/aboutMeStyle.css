@@ -1,23 +1,108 @@
+body {
+    color: #222222;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
 
-body{
-    background-size: cover;
-    font-family: tahoma;
-    overflow: hidden;
-    margin: 0;
-    font-family: 'DIN Alternate Bold', sans-serif;
+    background-image: url("..\static/images/forest.jpg");
+
 }
 
-.col{
-    float: left;
-    width: 50%;
-    padding: 10px;
+
+.image-section img{
+    position: relative;
+    width: 30%;
+    height:auto;
+    left: 30%;
 }
 
-.col img{
-    width: 25%;
+
+.content-footer,
+.masthead-heading,
+.masthead-intro {
+  text-align: center;
 }
-.row:after{
-    content: " ";
-    display: table;
-    clear:both;
+
+
+.masthead-intro {
+    position: relative;
+    margin-bottom: 0.1em;
+    font-size: 2em;
+    font-family: "Gentium Book Basic", Georgia, serif;
+}
+
+.introduction-section,
+.location-section,
+.questions-section,
+.image-section {
+    font-family: "Gentium Book Basic", Georgia, serif;
+    position: relative;
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}
+
+.introduction-section > p,
+.location-section > p,
+.questions-section,
+.content-footer > p {
+    /* Typography Declarations */
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    font-family: "Gentium Book Basic", Georgia, serif;
+}
+
+.questions-section > h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 2em 0 1em 0;
+    font-family: "Gentium Book Basic", Georgia, serif;
+}
+
+section > h1 {
+    margin-top: 2em;
+}
+
+.content-footer,
+.masthead-heading,
+.masthead-intro {
+  text-align: center;
+}
+
+
+
+.masthead-intro {
+  margin-bottom: 0.1em;
+  font-size: 2em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.masthead-heading {
+  margin-top: -0.2em;
+  font-weight: bold;
+  font-size: 6em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.introduction > p,
+.location > p,
+.content-footer > p {
+
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+h2 {
+
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.introduction-section,
+.location-section,
+.questions-section {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
 }
