@@ -40,11 +40,11 @@ function addRow() {
         var a = document.createElement("a");
         a.href = "buy";
         a.setAttribute("onClick", 'dataSet("..\\\\\\static/images/gallery/' + (i + 1) + '.png", " Moustache Man ", " Has funny moustache. I need to make sure that this is gonna work when the caption is descent sized.  ", "' + (i + 1) + '")');
-      
-        title.appendChild(description.cloneNode(true));
+     
         overlay.appendChild(title.cloneNode(true));
-        image__img.appendChild(overlay.cloneNode(true));
+        overlay.appendChild(description.cloneNode(true));
         image.appendChild(image__img.cloneNode(true));
+        image.appendChild(overlay.cloneNode(true));
         a.appendChild(image.cloneNode(true));
         cols[i % 3].appendChild(a.cloneNode(true));
     };
