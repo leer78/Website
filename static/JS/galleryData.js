@@ -26,8 +26,8 @@ function addRow() {
 
         var image__img = document.createElement("img");
         image__img.className = "image__img";
-        image__img.id = 'image-' + (i + 1) + '';
-        image__img.setAttribute('src', '..\\static/images/gallery/image-' + (i + 1) + '.png');
+        image__img.id =  (i + 1);
+        image__img.setAttribute('src', '..\\static/images/gallery/' + (i + 1) + '.png');
 
         var title = document.createElement("div");
         title.className = "image__title";
@@ -39,7 +39,7 @@ function addRow() {
 
         var a = document.createElement("a");
         a.href = "buy";
-        a.setAttribute("onClick", 'dataSet("..\\\\\\static/images/gallery/image-' + (i + 1) + '.png", " Moustache Man ", " Has funny moustache. I need to make sure that this is gonna work when the caption is descent sized.  ", "image-' + (i + 1) + '")');
+        a.setAttribute("onClick", 'dataSet("..\\\\\\static/images/gallery/' + (i + 1) + '.png", " Moustache Man ", " Has funny moustache. I need to make sure that this is gonna work when the caption is descent sized.  ", "' + (i + 1) + '")');
       
         title.appendChild(description.cloneNode(true));
         overlay.appendChild(title.cloneNode(true));
